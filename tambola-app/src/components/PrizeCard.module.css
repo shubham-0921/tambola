@@ -1,0 +1,89 @@
+.card {
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  transition: border-color .3s, background .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.won {
+  border-color: var(--pz-color);
+  background: rgba(var(--pz-rgb), 0.1);
+}
+
+.claimed { opacity: .35; }
+
+.header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.icon { font-size: 1.1rem; flex-shrink: 0; }
+.name { font-weight: 600; font-size: 0.88rem; flex: 1; color: var(--cream); }
+.claimed .name { text-decoration: line-through; color: var(--cream-dim); }
+.amount { font-size: 0.78rem; font-weight: 700; color: var(--pz-color); }
+.claimed .amount { text-decoration: line-through; color: rgba(240,232,216,0.2); }
+
+.pills { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+
+.pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(240,232,216,0.5);
+  transition: all .25s;
+}
+.pillHit {
+  background: rgba(var(--pz-rgb), 0.2);
+  border-color: var(--pz-color);
+  color: var(--pz-color);
+}
+.pillClaimed { opacity: .3; }
+
+.bar { height: 3px; background: rgba(255,255,255,0.07); border-radius: 100px; overflow: hidden; margin-bottom: 6px; }
+.barFill { height: 100%; border-radius: 100px; background: var(--pz-color); transition: width .4s; }
+
+.wonBadge {
+  position: absolute;
+  top: 8px; right: 8px;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--pz-color);
+  color: #0f0a1e;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.won .wonBadge { opacity: 1; }
+
+.claimRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+.nearLabel {
+  font-size: 0.7rem;
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.claimBtn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px;
+  padding: 2px 10px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(240,232,216,0.35);
+  font-family: 'DM Sans', sans-serif;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.claimBtn:hover { border-color: rgba(244,125,170,0.5); color: #f47daa; }
+.claimBtnActive { border-color: rgba(167,139,250,0.4); color: #a78bfa; }

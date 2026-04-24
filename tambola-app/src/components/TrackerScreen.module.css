@@ -1,0 +1,92 @@
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.h1 {
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #f5a623, #f7d94c, #f09020);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin: 0.6rem 0 0.4rem;
+}
+.sub { font-size: 0.9rem; color: rgba(240,232,216,0.45); }
+
+/* Progress */
+.progressCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.progressLabel {
+  font-size: 0.8rem;
+  color: rgba(240,232,216,0.45);
+  white-space: nowrap;
+}
+.progressBarWrap {
+  flex: 1;
+  min-width: 100px;
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progressBarFill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #f5a623, #f7d94c);
+  transition: width .4s ease;
+}
+.progressCount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.progressNum { font-size: 1.3rem; }
+
+/* Ticket */
+.ticketCard { margin-bottom: 1.5rem; }
+.ticketHint {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(240,232,216,0.2);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Prize grids */
+.prizeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0;
+}
+
+.housieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Reset */
+.resetBtn {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(240,232,216,0.45);
+  padding: 0.6rem 2rem;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+.resetBtn:hover { border-color: rgba(255,255,255,0.25); color: rgba(240,232,216,0.8); }
