@@ -45,7 +45,6 @@ export default function SetupScreen({ onScan, onManual, scanning }) {
             ref={fileRef}
             type="file"
             accept="image/*"
-            capture="environment"
             style={{ display: 'none' }}
             onChange={e => loadFile(e.target.files[0])}
           />
